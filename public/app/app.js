@@ -5,7 +5,7 @@ angular.module('app').config(['$routeProvider', '$locationProvider', function($r
 	$locationProvider.html5Mode(true);
 	$routeProvider
 		.when('/', {templateUrl:'/partials/friends/friends', controller: 'mvFriendsCtrl'})
-		.when('/profile', {templateUrl:'/partials/account/profile',
+		.when('/profile/:id', {templateUrl:'/partials/friends/profile', controller: 'mvProfileCtrl'
 		})
 		.otherwise('/');
 }]);
