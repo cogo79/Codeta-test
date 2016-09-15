@@ -1,0 +1,22 @@
+extends ../includes/layout
+
+block main-content
+
+	div#LBNavBar(ng-controller="mvNavBarCtrl" role="navigation")
+		div.goBack.navItem
+			img(src="images/Friends.png")
+		div.goForward.navItem
+			img(src="images/Friends.png")
+		div.clear.navItem
+			img(src="images/Friends.png")
+		div.home.navItem
+			img(src="images/Friends.png")
+		div.searchButton
+			img(src="images/Friends.png")
+		div.searchField
+			input(type="text" placeholder="Search...")
+
+	div(ng-view)
+
+	footer
+		p &copy; 2016 Miguel IT Corp International Ltd.

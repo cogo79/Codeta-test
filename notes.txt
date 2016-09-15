@@ -1,0 +1,1 @@
+/Users/yhc3l/Desktop/Github/Codeta-test,-/Users/yhc3l/Desktop/Github/Codeta-test/node_modules/*,-/Users/yhc3l/Desktop/Github/Codeta-test/public/vendor/*,-/Users/yhc3l/Desktop/Github/Codeta-test/public/css/bootstrap.css
