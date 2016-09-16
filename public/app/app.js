@@ -1,3 +1,4 @@
+
 angular.module('app', ['ngResource', 'ngRoute']);
 
 angular.module('app').config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
@@ -9,5 +10,4 @@ angular.module('app').config(['$routeProvider', '$locationProvider', function($r
 		})
 		.otherwise('/');
 }]);
-
 
