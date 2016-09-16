@@ -1,3 +1,5 @@
+MEDIUM_WIDTH_BREAKPOINT = 990px
+SMALL_WIDTH_BREAKPOINT = 576px
 
 footer
 	padding-left 15px
@@ -10,3 +12,83 @@ footer
 
 .toast-success
 	background-color #13987e
+
+.friendsHeader
+	margin-top 34px
+	margin-left 30px
+
+.friendsList > div
+	border 2px
+	border-style: solid
+	border-color black
+	height 98px
+	margin 5px
+	margin-top 0px
+	position relative
+	top 0px
+	left 0px
+	cursor pointer
+
+.friendsList > div:hover
+	background-color #EDEDED
+
+.friendsList .photo
+	height 90px
+	width 135px
+	margin-top 8px
+	float left
+
+.friendsList .photo > img
+	height 90px
+
+.friendsList p
+	float left
+	font-size 120%
+	margin 0px
+	position absolute
+	top 55px
+
+
+.friendsList p.name
+	left 176px
+	@media (max-width: MEDIUM_WIDTH_BREAKPOINT)
+		top 12px
+	@media (max-width: SMALL_WIDTH_BREAKPOINT)
+		top 5px
+		left 146px
+
+.friendsList p.status
+	left 380px
+	@media (max-width: MEDIUM_WIDTH_BREAKPOINT)
+		top 12px
+	@media (max-width: SMALL_WIDTH_BREAKPOINT)
+		top 30px
+		left 146px
+		font-size 90%
+
+.friendsList p.adress
+	left 590px
+	@media (max-width: MEDIUM_WIDTH_BREAKPOINT)
+		top 62px
+		left 176px
+	@media (max-width: SMALL_WIDTH_BREAKPOINT)
+		top 77px
+		left 146px
+		font-size 90%
+
+.friendsList div.trash
+	float right
+	overflow hidden
+	width 60px
+	height 56px
+	margin-top 20px
+	margin-right 10px
+
+.friendsList div.trash:hover
+	background-color grey
+
+.friendsList div.trash > img
+	height 70px
+	position relative
+	left -320px
+	top -6px

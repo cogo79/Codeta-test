@@ -1,1 +1,11 @@
-h1 Friends !! ;D
+h1.friendsHeader My Friends
+
+div.friendsList
+	div(ng-repeat="friend in friends" ng-click="gotoProfile(friend.id)")
+		div.photo
+			img(src="{{friend.photo}}")
+		p.name {{friend.name}}
+		p.status {{friend.status}}
+		p.adress {{friend.adress}}
+		div.trash( ng-click="delete($event, friend.id)")
+			img(src="images/Friends.png")
