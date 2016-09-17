@@ -1,2 +1,8 @@
-h1.friendsHeader {{friend.name}}s Profile
-		
+div.profile
+	h1.friendsHeader {{friend.name}}s Profile
+	.imageWrapper
+		img(src="{{friend.photo}}")
+	p.name {{friend.name}}
+	p.adress {{friend.adress}}
+	p.status {{friend.status}}
+	p.bio {{friend.bio}}

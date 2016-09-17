@@ -1,0 +1,55 @@
+.profile > .imageWrapper > img {
+  height: 450px;
+}
+@media (max-width: 675px) {
+  .profile > .imageWrapper > img {
+    height: 400px;
+  }
+}
+@media (max-width: 602px) {
+  .profile > .imageWrapper > img {
+    height: 340px;
+  }
+}
+@media (max-width: 500px) {
+  .profile > .imageWrapper > img {
+    height: 280px;
+  }
+}
+@media (max-width: 411px) {
+  .profile > .imageWrapper > img {
+    height: 254px;
+  }
+}
+.profile > .imageWrapper {
+  width: 675px;
+  float: left;
+}
+@media (max-width: 990px) {
+  .profile > .imageWrapper {
+    float: none;
+  }
+}
+@media (max-width: 675px) {
+  .profile > .imageWrapper {
+    width: 0px;
+  }
+}
+.profile p {
+  font-size: 140%;
+  margin-left: 20px;
+}
+@media (min-width: 991px) {
+  .profile > p.status {
+    position: absolute;
+    top: 539px;
+    left: 675px;
+    margin-left: 0px;
+  }
+}
+@media (min-width: 991px) {
+  .profile > p.bio {
+    position: absolute;
+    top: 573px;
+  }
+}
