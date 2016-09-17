@@ -25,6 +25,7 @@
 }
 .friendsList .photo > img {
   height: 90px;
+  border-top-right-radius: 15px;
 }
 .friendsList p {
   float: left;
