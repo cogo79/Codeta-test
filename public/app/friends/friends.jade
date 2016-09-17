@@ -1,7 +1,7 @@
 h1.friendsHeader My Friends
 
 div.friendsList
-	div(ng-repeat="friend in friends" ng-click="gotoProfile(friend.id)")
+	div(ng-repeat="friend in friends | filter:filter.get();" ng-click="gotoProfile(friend.id)")
 		div.photo
 			img(src="{{friend.photo}}")
 		p.name {{friend.name}}

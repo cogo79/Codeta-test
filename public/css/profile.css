@@ -32,7 +32,7 @@
 }
 @media (max-width: 675px) {
   .profile > .imageWrapper {
-    width: 0px;
+    width: 100%;
   }
 }
 .profile p {

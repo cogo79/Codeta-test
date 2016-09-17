@@ -1,5 +1,8 @@
-angular.module('app').controller('mvFriendsCtrl',['$scope', 'mvFriend', 'mvCachedFriends', '$location', function($scope, mvFriend, mvCachedFriends, $location) {
+angular.module('app').controller('mvFriendsCtrl',['$scope', 'mvFriend', 'mvCachedFriends', '$location', 'mvSearchFilter', function($scope, mvFriend, mvCachedFriends, $location, mvSearchFilter) {
 	$scope.friends;
+
+	$scope.filter = mvSearchFilter;
+
 	mvCachedFriends.query().$promise.then(function(friends) {
 		$scope.friends = friends;
 	});

@@ -3,17 +3,17 @@ extends ../includes/layout
 block main-content
 
 	div#LBNavBar(ng-controller="mvNavBarCtrl" role="navigation")
-		div.goBack.navItem
+		div.goBack.navItem(ng-click="history.back();")
 			img(src="images/Friends.png")
-		div.goForward.navItem
+		div.goForward.navItem(ng-click="history.forward();")
 			img(src="images/Friends.png")
-		div.clear.navItem
+		div.clear.navItem(ng-click="clearSearchField();")
 			img(src="images/Friends.png")
-		div.home.navItem
+		div.home.navItem(ng-click="home();")
 			img(src="images/Friends.png")
-		div.searchButton
+		div.searchButton(ng-click="search();")
 			img(src="images/Friends.png")
 		div.searchField
-			input(type="text" placeholder="Search...")
+			input(type="text" placeholder="Search..." ng-model="searchText")
 
 	div(ng-view)
