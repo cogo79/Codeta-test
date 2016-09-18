@@ -6,12 +6,12 @@ angular.module('app')
 	$scope.cancel = function() {
 		mvUserConfirm.cancel();
 	};
-	$scope.friend = mvUserConfirm.messageData();
+	$scope.messageData = mvUserConfirm.messageData();
 }])
-.directive('userConfirm', function() {
+.directive('userConfirmDelete', function() {
 	return {
 		restrict: 'E',
-		templateUrl: '/partials/common/confirm-delete-friend'
+		templateUrl: '/partials/friends/confirm-delete-friend'
 	};
 }).factory('mvUserConfirm', ['$q', function($q) {
 	var _letUserConfirm = false;

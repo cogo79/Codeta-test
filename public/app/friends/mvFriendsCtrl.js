@@ -18,7 +18,19 @@ angular.module('app').controller('mvFriendsCtrl',['$scope', 'mvFriend', 'mvCache
 		$event.stopPropagation();
 		mvFriend.get({id:_id}).$promise.then(function(friend) {
 			mvUserConfirm.letUserConfirm(friend).then(function() {
-				mvNotifier.notify('Your so called friend '+friend.name+' has ben deleted');
+				
+				mvFriend.delete({id:_id}).$promise.then(function(o) {
+					console.log("after delete: ",o);
+					mvNotifier.notify('Your so called friend '+friend.name+' has been deleted');
+					mvCachedFriends.reset();
+					mvCachedFriends.query().$promise.then(function(friends) {
+						$scope.friends = friends;
+					});
+				}, function(error) {
+					mvNotifier.error('Your so called friend '+friend.name+' could NOT bee deleted');
+				});
+
+
 			}, function(reason) {
 				console.log(reason);
 			});
