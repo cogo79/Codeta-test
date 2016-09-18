@@ -1,7 +1,9 @@
-angular.module('app').controller('mvFriendsCtrl',['$scope', 'mvFriend', 'mvCachedFriends', '$location', 'mvSearchFilter', function($scope, mvFriend, mvCachedFriends, $location, mvSearchFilter) {
+angular.module('app').controller('mvFriendsCtrl',['$scope', 'mvFriend', 'mvCachedFriends', '$location', 'mvSearchFilter', 'mvUserConfirm', 'mvNotifier', function($scope, mvFriend, mvCachedFriends, $location, mvSearchFilter, mvUserConfirm, mvNotifier) {
 	$scope.friends;
 
 	$scope.filter = mvSearchFilter;
+
+	$scope.userShouldConfirm = mvUserConfirm.userShouldConfirm;
 
 	mvCachedFriends.query().$promise.then(function(friends) {
 		$scope.friends = friends;
@@ -14,6 +16,15 @@ angular.module('app').controller('mvFriendsCtrl',['$scope', 'mvFriend', 'mvCache
 
 	$scope.delete = function($event, _id) {
 		$event.stopPropagation();
-		console.log("delete id:"+_id);
+		mvFriend.get({id:_id}).$promise.then(function(friend) {
+			mvUserConfirm.letUserConfirm(friend).then(function() {
+				mvNotifier.notify('Your so called friend '+friend.name+' has ben deleted');
+			}, function(reason) {
+				console.log(reason);
+			});
+		}, function(error) {
+			console.log(error);
+		});
+		
 	}
 }]);

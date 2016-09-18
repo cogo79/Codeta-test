@@ -9,3 +9,5 @@ div.friendsList
 		p.adress {{friend.adress}}
 		div.trash( ng-click="delete($event, friend.id)")
 			img(src="images/Friends.png")
+
+user-confirm(ng-if="userShouldConfirm()")

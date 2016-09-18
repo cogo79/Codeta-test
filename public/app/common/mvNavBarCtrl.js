@@ -2,6 +2,8 @@
 angular.module('app').controller('mvNavBarCtrl', ['$scope', '$location', '$window', 'mvSearchFilter', function($scope, $location, $window, mvSearchFilter) {
 	$scope.history = $window.history;
 
+	$scope.showConfirmDelete = true;
+
 	$scope.home = function() {
 		$location.path('/');
 	};

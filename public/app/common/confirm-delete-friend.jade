@@ -1,0 +1,5 @@
+.userConfirmBackGround
+	div.container(ng-controller="mvUserConfirmCtrl")
+		p Are you sure you want to get rid of your friend {{friend.name}} ?
+		button.cancel(ng-click="cancel();") No
+		button.confirm(ng-click="confirm();") Yes
